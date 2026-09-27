@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexStar 8SE Alignment Guide</title>
+    <!-- Bulma CSS CDN -->
+    <link rel="stylesheet" href="bulma.min.css">
+    <style>
+        /* Custom Space Theme Palette */
+        :root {
+            --bg-dark: #0f172a;       /* Deep Space Navy */
+            --bg-card: #1e293b;      /* Lighter Navy/Slate */
+            --accent-gold: #fbbf24;  /* Star Gold */
+            --text-main: #e2e8f0;    /* Soft White/Grey */
+            --text-muted: #94a3b8;   /* Muted Slate */
+            --border-color: #334155; /* Subtle Divider */
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Hero Section */
+        .hero.is-dark {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        /* Card Styling */
+        .box {
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        .phase-card {
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        /* Text Colors */
+        .title, .subtitle {
+            color: var(--text-main) !important;
+        }
+
+        .has-text-link {
+            color: var(--accent-gold) !important;
+        }
+
+        .content {
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: #fff;
+        }
+
+        /* Notifications (Customized for Dark Mode) */
+        .notification-custom {
+            background-color: #334155;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.25rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .notification-success-custom {
+            background-color: #064e3b;
+            color: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 1.25rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Table Styling */
+        .table {
+            background-color: var(--bg-card);
+            color: var(--text-main);
+        }
+
+        .table td, .table th {
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            border-color: var(--border-color);
+        }
+
+        .table thead th {
+            background-color: #0f172a;
+            color: var(--accent-gold);
+        }
+
+        /* Pro Tip Box */
+        .pro-tip {
+            background-color: #1e1b4b; 
+            border: 1px solid #4338ca;
+        }
+
+        .footer {
+            background-color: #0f172a;
+            color: var(--text-muted);
+        }
+
+        code {
+            background-color: #0f172a;
+            color: var(--accent-gold);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Menu Tree Specific Styling */
+        .menu-tree {
+            list-style: none;
+            padding-left: 0;
+        }
+        .menu-tree li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .menu-tree li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+        .menu-level-2 { margin-left: 30px; font-size: 0.9rem; }
+        .menu-level-3 { margin-left: 60px; font-size: 0.85rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <section class="hero is-dark is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">🌌 Celestron NexStar 8SE</h1>
+                <h2 class="subtitle is-4">Quick Alignment & Handset Guide</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            
+            <!-- Phase 1 -->
+            <div class="box phase-card">
+                <h3 class="title is-4 has-text-link">Phase 1: Physical Setup</h3>
+                <div class="content">
+                    <ol class="is-ordered">
+                        <li><strong>Stability:</strong> Set up the tripod on level ground. Use vibration suppression pads if available.</li>
+                        <li><strong>Mounting:</strong> Attach the mount arm. Slide the Optical Tube Assembly (OTA) into the rail and tighten the knob securely.</li>
+                        <li><strong>Balance:</strong> Move the OTA slightly forward (~1 inch) in the dovetail saddle to create a slight "fore-end imbalance."</li>
+                        <li><strong>Power:</strong> Plug into a dedicated power source. <strong>Avoid AA batteries</strong> to prevent voltage drops.</li>
+                        <li><strong>Leveling:</strong> Turn the scope on, move tube to horizontal, turn off. Adjust tripod legs until perfectly level.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="box phase-card">
+                <h3 class="title is-4 has-text-link">Phase 2: Pre-Alignment Calibration</h3>
+                <div class="columns">
+                    <div class="column">
+                        <h4 class="subtitle is-5" style="color: #fff;">1. Align the Finder</h4>
+                        <p class="is-italic mb-2">Crucial: Your finder must point exactly where the telescope points.</p>
+                        <ul class="content">
+                            <li>Find a distant object (pole, tree, or bright star).</li>
+                            <li>Center the object perfectly using the <strong>main telescope eyepiece</strong>.</li>
+                            <li>Adjust finder knobs until the object is also centered in the finder.</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h4 class="subtitle is-5" style="color: #fff;">2. Software Data Entry</h4>
+                        <ul class="content">
+                            <li>Power on <code>SCROLL UP/DOWN</code> select <strong>Two-Star Align</strong> <code>ENTER</code>.</li>
+                            <li>Review Time/Location: <code>ENTER</code> to accept or <code>BACK</code> to edit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="box phase-card">
+                <h3 class="title is-4 has-text-link">Phase 3: The Two-Star Alignment Process</h3>
+                <p class="mb-4"><small><em>Note: Use a long focal length eyepiece (e.g., 25mm) for these steps.</em></small></p>
+                
+                <div class="content">
+                    <div class="notification-custom">
+                        <strong>Step 1: Select Star 1</strong><br>
+                        When <code>SELECT STAR 1</code> appears, use <code>SCROLL UP/DOWN</code> to choose a bright star <code>ENTER</code>.
+                    </div>
+
+                    <div class="notification-custom">
+                        <strong>Step 2: Center Star 1</strong><br>
+                        Use direction arrows to slew the telescope and center the star in the <strong>finderscope</strong> <code>ENTER</code>. Then, center the star in the <strong>eyepiece</strong> <code>ALIGN</code>.
+                        <br><small><em>HINT: Press the <code>MOTOR SPEED</code> button to select a slower speed (1-9) for fine centering.</em></small>
+                    </div>
+
+                    <div class="notification-custom">
+                        <strong>Step 3: Select and Center Star 2</strong><br>
+                        Choose a second star (ideally 40°–60° away from the first). Slew and center in the <strong>finderscope</strong> <code>ENTER</code>. Then, center in the <strong>eyepiece</strong> using the same approach angle <code>ALIGN</code>.
+                    </div>
+
+                    <div class="notification-success-custom">
+                        <strong>Alignment Complete</strong><br>
+                        The display will read <strong>“Align Successful”</strong> and tracking motors will engage.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Handset Guide & Menu Tree -->
+            <div class="box">
+                <h3 class="title is-4 has-text-link">🕹️ Handset Operation Guide</h3>
+                <div class="columns">
+                    <!-- Button Logic -->
+                    <div class="column is-5">
+                        <h4 class="subtitle is-5" style="color: #fff;">Button Logic</h4>
+                        <div class="content">
+                            <p><strong><code>MENU</code>:</strong> Enters the main system settings. Press again to exit.</p>
+                            <p><strong><code>ENTER</code>:</strong> Confirms a selection or proceeds to the next step.</p>
+                            <p><strong><code>BACK</code>:</strong> Undoes a selection or returns to the previous menu.</p>
+                            <p><strong><code>Slew Arrows</code>:</strong> Manually moves the telescope (Up, Down, Left, Right).</p>
+                            <p><strong><code>MOTOR SPEED</code>:</strong> Changes the slew rate (1 = Slowest, 9 = Fastest). Use for precision centering.</p>
+                        </div>
+                    </div>
+                    <!-- Menu Tree -->
+                    <div class="column is-7">
+                        <h4 class="subtitle is-5" style="color: #fff;">Software Menu Tree</h4>
+                        <ul class="menu-tree content">
+                            <li><strong>MAIN MENU</strong>
+                                <ul class="menu-tree menu-level-2">
+                                    <li><strong>Scope Set-Up</strong>
+                                        <ul class="menu-tree menu-level-3">
+                                            <li>Anti-Backlash</li>
+                                            <li>Alignment Method (One Star, Two Star)</li>
+                                            <li>Slew Rate Adjustment</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Sky Tour</strong>
+                                        <ul class="menu-tree menu-level-3">
+                                            <li>Guided tour of bright objects</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>User Defined</strong>
+                                        <ul class="menu-tree menu-level-3">
+                                            <li>Create/Edit custom targets</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Utilities</strong>
+                                        <ul class="menu-tree menu-level-3">
+                                            <li>Slew Rate / Tracking Speed</li>
+                                            <li>Software Version Check</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro Tips -->
+            <div class="box pro-tip">
+                <h3 class="title is-4" style="color: var(--accent-gold);">🚀 Pro Tips for Maximum Accuracy</h3>
+                <div class="columns">
+                    <div class="column">
+                        <strong>The "Doughnut" Centering Method</strong><br>
+                        Slightly defocus the star until it becomes a soft, blurry circle. It is much easier to judge if a large circle is centered than a tiny dot. Refocus just before aligning.
+                    </div>
+                    <div class="column">
+                        <strong>The "Up-and-Right" Rule</strong><br>
+                        To beat gear backlash, always make your final movements <strong>UP and RIGHT</strong>. If you overshoot, move the star back to the bottom-left quadrant and approach again moving Up and Right.
+                    </div>
+                </div>
+                <hr style="background-color: var(--border-color);">
+                <div class="content">
+                    <strong>Advanced: Anti-Backlash Settings</strong><br>
+                    <code>Menu</code> <code>Scope Set-Up</code> <code>Anti-Backlash</code>. Slew to a distant object during the day and adjust Azimuth/Altitude values until movement is smooth.
+                </div>
+            </div>
+
+            <!-- Star Guide -->
+            <div class="box">
+                <h3 class="title is-4" style="color: var(--accent-gold);">⭐ Stars for Alignment</h3>
+                <div class="table-container">
+                    <table class="table is-fullwidth is-striped is-hoverable">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Suggested Star Pair</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>January</td><td>Capella &amp; Aldebaran</td></tr>
+                            <tr><td>February / March</td><td>Sirius &amp; Rigel</td></tr>
+                            <tr><td>April</td><td>Regulus &amp; Procyon</td></tr>
+                            <tr><td>June / July</td><td>Vega &amp; Arcturus</td></tr>
+                            <tr><td>August</td><td>Altair &amp; Deneb</td></tr>
+                            <tr><td>September</td><td>Altair &amp; Rasalhague/Vega</td></tr>
+                            <tr><td>October</td><td>Altair &amp; Vega</td></tr>
+                            <tr><td>November</td><td>Altair &amp; Caph/Vega</td></tr>
+                            <tr><td>December</td><td>Enif &amp; Hamal</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Magnification Guide -->
+            <div class="box">
+                <h3 class="title is-4" style="color: var(--accent-gold);">🔭 Quick Reference: Magnification Guide</h3>
+                <p class="mb-4">Formula: <strong>Telescope Focal Length (2032mm) ÷ Eyepiece Focal Length</strong></p>
+                <div class="table-container">
+                    <table class="table is-fullwidth is-striped is-hoverable">
+                        <thead>
+                            <tr>
+                                <th>Eyepiece</th>
+                                <th>Magnification</th>
+                                <th>Best For...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>32mm</strong></td><td>≈ 63x</td><td>Wide fields, large clusters, Moon</td></tr>
+                            <tr><td><strong>25mm</strong></td><td>≈ 81x</td><td>General viewing, Alignment stars</td></tr>
+                            <tr><td><strong>17mm</strong></td><td>≈ 120x</td><td>Jupiter, Saturn (detailed disk)</td></tr>
+                            <tr><td><strong>13mm</strong></td><td>≈ 156x</td><td>High-detail planetary viewing</td></tr>
+                            <tr><td><strong>Barlow (2x)</strong></td><td>Double the Mag</td><td>Extreme detail (on steady nights)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="is-size-7 has-text-grey"><strong>Note on Planets:</strong> If a planet looks like a "fuzzy white dot," you need more magnification (smaller mm eyepiece).</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Celestron NexStar 8SE Quick Guide | Clear Skies! ✨</p>
+        </div>
+    </footer>
+
+</body>
+</html>
